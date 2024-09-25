@@ -1,0 +1,48 @@
+GET http://localhost:4004/odata/v4/catalog/Books
+
+###
+GET http://localhost:4004/basic/ping()
+
+###
+GET http://localhost:4004/basic/hello(to='Sonali')
+
+###
+GET http://localhost:4004/basic/sum(a=100,b=42)
+
+
+###
+GET http://localhost:4004/rest/plain/theAnswer
+
+###
+POST http://localhost:4004/rest/plain/highestValue
+Content-Type: application/json
+
+{
+    "numbers": [100, -2, 43, 764, -500]
+}
+
+
+###
+GET http://localhost:4004/northbreeze/productInfo(id=11)
+
+
+###
+GET http://localhost:4004/northbreeze/Suppliers(22)/Products
+
+###
+GET http://localhost:4004/northbreeze/Suppliers(22)/Products?$select=ProductName,UnitPrice
+
+
+###
+POST http://localhost:4004/northbreeze/selectProduct
+Content-Type: application/json
+
+{
+    "communityid": "ranjas"
+}
+
+###
+GET http://localhost:4004/northbreeze/TotalProducts
+
+###
+GET http://localhost:4004/northbreeze/Products(1)/stockValue
